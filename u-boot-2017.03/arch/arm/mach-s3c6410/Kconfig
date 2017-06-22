@@ -1,0 +1,18 @@
+if ARCH_S3C6410
+
+choice
+	prompt "S3C6410 board select"
+	optional
+
+config TARGET_OK6410
+	bool "OK6410 board"
+	select OF_CONTROL
+
+endchoice
+
+config SYS_SOC
+	default "s3c6410"
+
+source "board/forlinx/ok6410/Kconfig"
+
+endif
