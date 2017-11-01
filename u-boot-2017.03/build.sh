@@ -4,5 +4,6 @@ export CROSS_COMPILE=${CROSS_GCC_PATH}arm-none-eabi-
 echo ${CROSS_COMPILE}
 make distclean
 make ok6410_defconfig
+#make rpi_3_32b_defconfig 
 make all V=1
 
