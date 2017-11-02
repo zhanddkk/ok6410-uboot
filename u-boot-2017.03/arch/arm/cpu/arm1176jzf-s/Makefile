@@ -5,4 +5,5 @@
 
 obj- += dummy.o
 extra-y	= start.o
-
+obj-y += cpu.o
+obj-y += timer.o
