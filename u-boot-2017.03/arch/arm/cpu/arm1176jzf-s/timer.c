@@ -21,3 +21,9 @@ void reset_cpu(ulong ignored)
 {
 
 }
+
+unsigned long timer_read_counter(void)
+{
+	return 0;
+}
+
