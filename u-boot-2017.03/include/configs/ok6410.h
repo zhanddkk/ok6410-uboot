@@ -1,6 +1,7 @@
 #ifndef OK6410_H_
 #define OK6410_H_
 
+#define CONFIG_S3C6410	/* which is in a S3C6410 */
 #define CONFIG_SYS_UBOOT_BASE 0x500000
 #define CONFIG_SYS_TEXT_BASE 0x500000
 #define CONFIG_ENV_SIZE 0x1000
@@ -22,5 +23,7 @@
 #define CONFIG_ENV_ADDR 0x30000
 
 #define CONFIG_SYS_INIT_SP_ADDR 0x10000
+
+#define CONFIG_SYS_HZ		1000	/* decrementer freq: 1ms tick */
 #endif
 
