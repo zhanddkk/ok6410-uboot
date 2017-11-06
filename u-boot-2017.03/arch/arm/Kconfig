@@ -110,6 +110,11 @@ config CPU_ARM1176
 	select HAS_VBAR
 	select SYS_CACHE_SHIFT_5
 
+config CPU_ARM1176JZF_S
+	bool
+	select HAS_VBAR
+	select SYS_CACHE_SHIFT_5
+
 config CPU_V7
 	bool
 	select HAS_VBAR
@@ -136,6 +141,7 @@ config SYS_CPU
 	default "arm946es" if CPU_ARM946ES
 	default "arm1136" if CPU_ARM1136
 	default "arm1176" if CPU_ARM1176
+	default "arm1176jzf-s" if CPU_ARM1176JZF_S
 	default "armv7" if CPU_V7
 	default "armv7m" if CPU_V7M
 	default "pxa" if CPU_PXA
@@ -150,6 +156,7 @@ config SYS_ARM_ARCH
 	default 5 if CPU_ARM946ES
 	default 6 if CPU_ARM1136
 	default 6 if CPU_ARM1176
+	default 6 if CPU_ARM1176JZF_S
 	default 7 if CPU_V7
 	default 7 if CPU_V7M
 	default 5 if CPU_PXA
@@ -554,6 +561,10 @@ config ARCH_S5PC1XX
 	select DM_SERIAL
 	select DM_GPIO
 	select DM_I2C
+
+config ARCH_S3C6410
+	bool "Samsung S3C6410"
+	select CPU_ARM1176JZF_S
 
 config ARCH_HIGHBANK
 	bool "Calxeda Highbank"
@@ -1175,6 +1186,8 @@ source "arch/arm/mach-uniphier/Kconfig"
 
 source "arch/arm/mach-zynq/Kconfig"
 
+source "arch/arm/mach-s3c6410/Kconfig"
+
 source "arch/arm/cpu/armv7/Kconfig"
 
 source "arch/arm/cpu/armv8/zynqmp/Kconfig"
@@ -1204,6 +1217,7 @@ source "board/compulab/cm_t43/Kconfig"
 source "board/creative/xfi3/Kconfig"
 source "board/denx/m28evk/Kconfig"
 source "board/denx/m53evk/Kconfig"
+source "board/forlinx/ok6410/Kconfig"
 source "board/freescale/ls2080a/Kconfig"
 source "board/freescale/ls2080aqds/Kconfig"
 source "board/freescale/ls2080ardb/Kconfig"

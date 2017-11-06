@@ -16,6 +16,7 @@ arch-$(CONFIG_CPU_SA1100)	=-march=armv4
 arch-$(CONFIG_CPU_PXA)		=
 arch-$(CONFIG_CPU_ARM1136)	=-march=armv5
 arch-$(CONFIG_CPU_ARM1176)	=-march=armv5t
+arch-$(CONFIG_CPU_ARM1176JZF_S)	=
 arch-$(CONFIG_CPU_V7)		=$(call cc-option, -march=armv7-a, \
 				 $(call cc-option, -march=armv7, -march=armv5))
 arch-$(CONFIG_ARM64)		=-march=armv8-a
@@ -40,6 +41,7 @@ tune-$(CONFIG_CPU_SA1100)	=-mtune=strongarm1100
 tune-$(CONFIG_CPU_PXA)		=-mcpu=xscale
 tune-$(CONFIG_CPU_ARM1136)	=
 tune-$(CONFIG_CPU_ARM1176)	=
+tune-$(CONFIG_CPU_ARM1176JZF_S)	=-mcpu=arm1176jzf-s
 tune-$(CONFIG_CPU_V7)		=
 tune-$(CONFIG_ARM64)		=
 
@@ -75,6 +77,7 @@ machine-$(CONFIG_STM32)			+= stm32
 machine-$(CONFIG_TEGRA)			+= tegra
 machine-$(CONFIG_ARCH_UNIPHIER)		+= uniphier
 machine-$(CONFIG_ARCH_ZYNQ)		+= zynq
+machine-$(CONFIG_ARCH_S3C6410)		+= s3c6410
 
 machdirs := $(patsubst %,arch/arm/mach-%/,$(machine-y))
 

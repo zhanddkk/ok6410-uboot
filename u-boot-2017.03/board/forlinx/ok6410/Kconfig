@@ -1,0 +1,13 @@
+if TARGET_OK6410
+
+config SYS_BOARD
+	default "ok6410"
+
+config SYS_VENDOR
+	default "forlinx"
+
+config SYS_CONFIG_NAME
+	default "ok6410"
+
+endif
+
