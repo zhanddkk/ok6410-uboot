@@ -1,2 +1,2 @@
-# u-boot-s3c6410
-u-boot for s3c6410 base on eclipse
+# ok6410-uboot
+u-boot for ok6410 base on eclipse
