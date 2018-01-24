@@ -6,7 +6,7 @@ choice
 
 config TARGET_OK6410
 	bool "OK6410 board"
-	select OF_CONTROL
+#	select OF_CONTROL
 
 endchoice
 

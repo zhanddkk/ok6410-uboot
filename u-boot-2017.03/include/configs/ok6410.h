@@ -27,7 +27,7 @@
 
 #define CONFIG_SYS_HZ		1000	/* decrementer freq: 1ms tick */
 
-#define CONFIG_MTD_NAND_FLASH
+/* #define CONFIG_MTD_NAND_FLASH */
 #define CONFIG_SYS_MAX_NAND_DEVICE 	1
 
 #define CONFIG_NAND_S3C6410
